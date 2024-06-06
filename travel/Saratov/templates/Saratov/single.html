@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<ul class="list-articles">
+	{% for p in posts %}
+			<li><h2>{{p.title}}</h2>
+				{% autoescape off %}
+				{{p.text}}
+				{% endautoescape %}
+			<div class="clear"></div>
+	{% endfor %}
+</ul>
+{% endblock %}
